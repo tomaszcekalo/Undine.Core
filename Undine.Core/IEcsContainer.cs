@@ -21,19 +21,19 @@
         where D : struct;
 
         IUnifiedEntity CreateNewEntity();
-        IProcessAll GetSystem<A>(UnifiedSystem<A> system)
+        ISystem GetSystem<A>(UnifiedSystem<A> system)
         where A : struct;
 
-        IProcessAll GetSystem<A, B>(UnifiedSystem<A, B> system)
+        ISystem GetSystem<A, B>(UnifiedSystem<A, B> system)
         where A : struct
         where B : struct;
 
-        IProcessAll GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
+        ISystem GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         where A : struct
         where B : struct
         where C : struct;
 
-        IProcessAll GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
+        ISystem GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         where A : struct
         where B : struct
         where C : struct

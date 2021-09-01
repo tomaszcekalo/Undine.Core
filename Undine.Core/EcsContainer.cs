@@ -20,19 +20,19 @@
         where C : struct
         where D : struct;
 
-        public abstract IProcessAll GetSystem<A>(UnifiedSystem<A> system)
+        public abstract ISystem GetSystem<A>(UnifiedSystem<A> system)
         where A : struct;
 
-        public abstract IProcessAll GetSystem<A, B>(UnifiedSystem<A, B> system)
+        public abstract ISystem GetSystem<A, B>(UnifiedSystem<A, B> system)
         where A : struct
         where B : struct;
 
-        public abstract IProcessAll GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
+        public abstract ISystem GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         where A : struct
         where B : struct
         where C : struct;
 
-        public abstract IProcessAll GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
+        public abstract ISystem GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         where A : struct
         where B : struct
         where C : struct
