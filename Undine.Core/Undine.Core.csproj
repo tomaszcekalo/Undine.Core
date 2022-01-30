@@ -6,13 +6,13 @@
     <Company>Tomasz Cekało</Company>
     <Description>Core of the Undine Game Engine</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.0.0.1</AssemblyVersion>
-    <FileVersion>0.0.0.1</FileVersion>
+    <AssemblyVersion>0.0.0.2</AssemblyVersion>
+    <FileVersion>0.0.0.2</FileVersion>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/tomaszcekalo/Undine.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tomaszcekalo/Undine.Core</RepositoryUrl>
     <PackageTags>ecs, reactive, patterns, ioc, view-separation, xna, game-development, unity, game-development, monogame, gamedev, games, ecs, c-sharp, entity-component, entity-framework, entity, entity-component-system, tdd, test-driven-development, performance, design-pattern, paradigmshift, paradigm, design-patterns, game, game-engine, scripts, scripting, data-driven, data, driven</PackageTags>
-    <Version>0.0.0.1</Version>
+    <Version>0.0.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

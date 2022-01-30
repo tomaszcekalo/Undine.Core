@@ -5,7 +5,7 @@
         void AddComponent<A>(in A component)
             where A : struct;
 
-        A GetComponent<A>()
+        ref A GetComponent<A>()
             where A : struct;
     }
 }
