@@ -6,19 +6,21 @@
     <Company>Tomasz Cekało</Company>
     <Description>Core of the Undine Game Engine</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.0.0.3</AssemblyVersion>
-    <FileVersion>0.0.0.3</FileVersion>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/tomaszcekalo/Undine.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tomaszcekalo/Undine.Core</RepositoryUrl>
     <PackageTags>ecs, reactive, patterns, ioc, view-separation, xna, game-development, unity, game-development, monogame, gamedev, games, ecs, c-sharp, entity-component, entity-framework, entity, entity-component-system, tdd, test-driven-development, performance, design-pattern, paradigmshift, paradigm, design-patterns, game, game-engine, scripts, scripting, data-driven, data, driven</PackageTags>
-    <Version>0.0.0.3</Version>
+	<Version>0.0.0.6</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
-    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
+
 
 </Project>

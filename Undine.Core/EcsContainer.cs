@@ -5,16 +5,19 @@ namespace Undine.Core
 {
     public abstract class EcsContainer : IEcsContainer
     {
-        private Dictionary<Type, Action<object, IUnifiedEntity>> _actions = new Dictionary<Type, Action<object, IUnifiedEntity>>();
+        protected Dictionary<Type, Action<object, IUnifiedEntity>> _actions = new Dictionary<Type, Action<object, IUnifiedEntity>>();
 
         public virtual void RegisterComponentType<A>(Action<object, IUnifiedEntity> action = null)
             where A : struct
         {
-            if (action == null)
+            if (!_actions.ContainsKey(typeof(A)))
             {
-                action = (component, entity) => entity.AddComponent((A)component);
+                if (action == null)
+                {
+                    action = (component, entity) => entity.AddComponent((A)component);
+                }
+                _actions[typeof(A)] = action;
             }
-            _actions[typeof(A)] = action;
         }
 
         public virtual void LoadEntitiesFromEditor(List<EditorEntity> entities)
