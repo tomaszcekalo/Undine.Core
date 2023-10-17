@@ -1,4 +1,4 @@
-﻿namespace Undine.Core
+﻿namespace Undine.Core.Struct
 {
     public interface IUnifiedEntity
     {

@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace Undine.Core
+namespace Undine.Core.Unmanaged
 {
     public abstract class EcsContainer : IEcsContainer
     {
         protected Dictionary<Type, Action<object, IUnifiedEntity>> _actions = new Dictionary<Type, Action<object, IUnifiedEntity>>();
 
         public virtual void RegisterComponentType<A>(Action<object, IUnifiedEntity> action = null)
-            where A : struct
+            where A : unmanaged
         {
             if (!_actions.ContainsKey(typeof(A)))
             {
@@ -24,7 +25,7 @@ namespace Undine.Core
         {
             foreach (var editorEntity in entities)
             {
-                var entity = this.CreateNewEntity();
+                var entity = CreateNewEntity();
                 foreach (var item in editorEntity.Components)
                 {
                     _actions[item.Key].Invoke(item, entity);
@@ -33,40 +34,40 @@ namespace Undine.Core
         }
 
         public abstract void AddSystem<A>(UnifiedSystem<A> system)
-        where A : struct;
+        where A : unmanaged;
 
         public abstract void AddSystem<A, B>(UnifiedSystem<A, B> system)
-        where A : struct
-        where B : struct;
+        where A : unmanaged
+        where B : unmanaged;
 
         public abstract void AddSystem<A, B, C>(UnifiedSystem<A, B, C> system)
-        where A : struct
-        where B : struct
-        where C : struct;
+        where A : unmanaged
+        where B : unmanaged
+        where C : unmanaged;
 
         public abstract void AddSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
-        where A : struct
-        where B : struct
-        where C : struct
-        where D : struct;
+        where A : unmanaged
+        where B : unmanaged
+        where C : unmanaged
+        where D : unmanaged;
 
         public abstract ISystem GetSystem<A>(UnifiedSystem<A> system)
-        where A : struct;
+        where A : unmanaged;
 
         public abstract ISystem GetSystem<A, B>(UnifiedSystem<A, B> system)
-        where A : struct
-        where B : struct;
+        where A : unmanaged
+        where B : unmanaged;
 
         public abstract ISystem GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
-        where A : struct
-        where B : struct
-        where C : struct;
+        where A : unmanaged
+        where B : unmanaged
+        where C : unmanaged;
 
         public abstract ISystem GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
-        where A : struct
-        where B : struct
-        where C : struct
-        where D : struct;
+        where A : unmanaged
+        where B : unmanaged
+        where C : unmanaged
+        where D : unmanaged;
 
         public virtual void Init()
         {
