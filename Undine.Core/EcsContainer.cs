@@ -6,7 +6,10 @@ namespace Undine.Core
     public abstract class EcsContainer : IEcsContainer
     {
         protected Dictionary<Type, Action<object, IUnifiedEntity>> _actions = new Dictionary<Type, Action<object, IUnifiedEntity>>();
-
+        public virtual IEnumerable<Type> GetRegisteredComponentTypes()
+        {
+            return _actions.Keys;
+        }
         public virtual void RegisterComponentType<A>(Action<object, IUnifiedEntity> action = null)
             where A : struct
         {
