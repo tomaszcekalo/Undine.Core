@@ -27,7 +27,7 @@ namespace Undine.Core
                 var entity = this.CreateNewEntity();
                 foreach (var item in editorEntity.Components)
                 {
-                    _actions[item.Key].Invoke(item, entity);
+                    _actions[item.Key].Invoke(item.Value, entity);
                 }
             }
         }
