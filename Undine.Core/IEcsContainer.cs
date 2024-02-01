@@ -21,6 +21,7 @@
         where D : struct;
 
         IUnifiedEntity CreateNewEntity();
+        void DeleteEntity(IUnifiedEntity entity);
         ISystem GetSystem<A>(UnifiedSystem<A> system)
         where A : struct;
 

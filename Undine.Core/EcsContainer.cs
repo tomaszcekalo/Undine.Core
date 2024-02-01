@@ -78,5 +78,7 @@ namespace Undine.Core
         public abstract void Run();
 
         public abstract IUnifiedEntity CreateNewEntity();
+
+        public abstract void DeleteEntity(IUnifiedEntity entity);
     }
 }
